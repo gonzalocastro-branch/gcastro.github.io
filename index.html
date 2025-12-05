@@ -10,34 +10,7 @@
         (function (b, r, a, n, c, h, _, s, d, k) { if (!b[n] || !b[n]._q) { for (; s < _.length;)c(h, _[s++]); d = r.createElement(a); d.async = 1; d.src = "https://cdn.branch.io/branch-latest.min.js"; k = r.getElementsByTagName(a)[0]; k.parentNode.insertBefore(d, k); b[n] = h } })(window, document, "script", "branch", function (b, r) { b[r] = function () { b._q.push([r, arguments]) } }, { _q: [], _v: 1 }, "addListener banner closeBanner closeJourney data deepview deepviewCta first init link logout removeListener setBranchViewData setIdentity track trackCommerceEvent logEvent disableTracking getBrowserFingerprintId crossPlatformIds lastAttributedTouchData setAPIResponseCallback qrCode setRequestMetaData setAPIUrl getAPIUrl setDMAParamsForEEA".split(" "), 0);
         branch.setAPIUrl("https://api.stage.branch.io");
         branch.init('key_live_dDtcRXlH0lXtx3Q2RbSCPfoizFm1GYnF', function (err, data) {
-            console.log('Branch initialized:', err, data);
-            
-            // Show Journey Banner
-            branch.banner({
-                icon: '⚽',
-                title: 'Join Our Soccer Community!',
-                description: 'Get exclusive access to soccer content, live matches, and more.',
-                openAppButtonText: 'Open App',
-                downloadAppButtonText: 'Download App',
-                sendLinkText: 'Send Link',
-                phonePreviewText: '+1 (999) 999-9999',
-                showiOS: true,
-                showAndroid: true,
-                showDesktop: true,
-                disableHide: false,
-                forgetHide: false,
-                position: 'top',
-                mobileSticky: false,
-                desktopSticky: true,
-                make_new_link: false,
-                open_app: true
-            }, {
-                tags: ['soccer', 'sports'],
-                data: {
-                    'source': 'web_page',
-                    'campaign': 'soccer_journey'
-                }
-            });
+            console.log(err, data);
         });
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
